@@ -10,15 +10,21 @@
 #include <stdlib.h>
 #include <array>
 #include <memory>
+#include <utility>
 
 #include <gui/chessgame_screen/AbstractPiece.hpp>
 #include <gui/chessgame_screen/ChessEnums.hpp>
 #include <gui/chessgame_screen/PieceSelector.hpp>
 #include <gui/chessgame_screen/SquareRenderer.hpp>
 #include <gui/chessgame_screen/BoardRenderer.hpp>
+#include <gui/common/GameStateSerializer.hpp>
 #include <touchgfx/mixins/FadeAnimator.hpp>
 #include <touchgfx/containers/Container.hpp>
 #include <BitmapDatabase.hpp>
+#include <touchgfx/Callback.hpp>
+#include <gui/chessgame_screen/BoardState.hpp>
+#include <gui/chessgame_screen/BoardStateModel.hpp>
+#include <gui/chessgame_screen/ChessAI.hpp>
 
 using namespace touchgfx;
 
@@ -29,36 +35,45 @@ public:
     virtual ~Board();
     virtual void setupBoard();
     virtual void handleClickEvent(int position);
-    virtual void serializeBoardState();
 
-protected:
-    std::array<std::unique_ptr<AbstractPiece>, 64> _board;
-    PieceColor _currentPlayer;
-    
-    int _selectedPiecePosition; // Track the currently selected piece position
-    touchgfx::FadeAnimator< touchgfx::Image > Check;
-    virtual void MovePiece(int from, int to);
+    // save and load game functions
+    virtual void saveGame(int _gameNumber);
+    virtual void loadGame(int _gameNumber);
+    virtual void resetGame();
+
+    void setPlayerTurnCallback(touchgfx::GenericCallback<PieceColor>* callback);
+    void setWinnerCallback(touchgfx::GenericCallback<PieceColor>* callback);
+    PieceColor getPlayerTurn();
+
+    void setAIMode(bool mode);
+    ChessAI getAI();
 
 private:
+    BoardState _boardState;
+    BoardStateModel _boardStateModel;
+
+    touchgfx::FadeAnimator<touchgfx::Image> Check;
+    virtual void MovePiece(int from, int to);
+
+    void checkGameState();
+
     void highlightPieceAndMoves(int position);
-    void updateBoardColors(); // New method to update board colors
-    int isKingInCheck(PieceColor color); // Modified method to return the position of the checking piece
-    bool wouldMoveCauseCheck(int from, int to);
-    bool hasLegalMoves(PieceColor color); // New method to check if the player has any legal moves
-    bool hasCheckmate(PieceColor color); // New method to check for checkmate
-    std::list<int> filterValidMoves(const std::list<int>& possibleMoves, int from);
-
-    // New variables for tracking the last move
-    int _lastMoveFrom; // Track the starting position of the last move
-    int _lastMoveTo;   // Track the ending position of the last move
-
-    // Track king positions
-    int _whiteKingPosition;
-    int _blackKingPosition;
+    void updateBoardColors();
 
     SquareRenderer _squareRenderer;
     BoardRenderer _boardRenderer;
     PieceSelector _pieceSelector;
+    GameStateSerializer _gameStateSerializer;
+
+    std::string _savedGames[3];
+
+    touchgfx::GenericCallback<PieceColor>* playerTurnCallback; // Player turn callback
+    touchgfx::GenericCallback<PieceColor>* winnerCallback; // Player turn callback
+
+    ChessAI ai;
+    void handleAIMove();
+    void processMove(int from, int to);
+    bool aiMode; // AI mode flag
 };
 
 #endif /* BOARD_HPP */

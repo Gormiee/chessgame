@@ -11,7 +11,7 @@ BoardRenderer::BoardRenderer() {
     setHeight(272);
 }
 
-void BoardRenderer::setupBoard(std::array<std::unique_ptr<AbstractPiece>, 64>& board) {
+void BoardRenderer::setupBoard(std::array<std::shared_ptr<AbstractPiece>, 64>& board) {
     // Initialize BLACK pawns
     for (int j = 0; j < 8; ++j) {
         int position = j + 8;
@@ -81,6 +81,26 @@ void BoardRenderer::setupBoard(std::array<std::unique_ptr<AbstractPiece>, 64>& b
     }
 }
 
-void BoardRenderer::addPiece(std::unique_ptr<AbstractPiece> piece, int position, std::array<std::unique_ptr<AbstractPiece>, 64>& board) {
+void BoardRenderer::setupSavedBoard(std::array<std::shared_ptr<AbstractPiece>, 64>& board, std::array<std::shared_ptr<AbstractPiece>, 64>& tmpboard)
+{
+    for (auto& piece : board) {
+        piece.reset();  // This sets the shared_ptr to nullptr
+    }
+    for (int i = 0; i < 64; ++i) {
+        if (tmpboard[i]) {
+            addPiece(std::move(tmpboard[i]), i, board);
+        }
+    }
+}
+
+void BoardRenderer::promotePawn(std::array<std::shared_ptr<AbstractPiece>, 64>& board, int position)
+{
+	PieceColor color = board[position]->GetColor();
+	board[position].reset();
+	addPiece(std::make_unique<Queen>(color, position, this), position, board);
+
+}
+
+void BoardRenderer::addPiece(std::shared_ptr<AbstractPiece> piece, int position, std::array<std::shared_ptr<AbstractPiece>, 64>& board) {
     board[position] = std::move(piece);
 }

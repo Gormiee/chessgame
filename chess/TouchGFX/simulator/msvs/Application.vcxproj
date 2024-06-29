@@ -18,16 +18,24 @@
     <ClCompile Include="$(ApplicationRoot)\simulator\main.cpp"/>
     <ClCompile Include="$(ApplicationRoot)\generated\simulator\src\mainBase.cpp"/>
     <ClCompile Include="..\..\gui\src\chessgame_screen\BoardRenderer.cpp"/>
+    <ClCompile Include="..\..\gui\src\chessgame_screen\BoardState.cpp"/>
+    <ClCompile Include="..\..\gui\src\chessgame_screen\BoardStateModel.cpp"/>
+    <ClCompile Include="..\..\gui\src\chessgame_screen\ChessTimer.cpp"/>
+    <ClCompile Include="..\..\gui\src\chessgame_screen\ChessAI.cpp"/>
     <ClCompile Include="..\..\gui\src\chessgame_screen\PieceSelector.cpp"/>
     <ClCompile Include="..\..\gui\src\chessgame_screen\SquareRenderer.cpp"/>
     <ClCompile Include="..\..\gui\src\common\FrontendApplication.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\common\FrontendApplicationBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\common\GameStateSerializer.cpp"/>
     <ClCompile Include="..\..\gui\src\model\Model.cpp"/>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp"/>
     <ClCompile Include="..\..\gui\src\chessgame_screen\ChessGamePresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\chessgame_screen\ChessGameView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\chessgame_screen\ChessGameViewBase.cpp"/>
-    <ClCompile Include="..\..\gui\src\chessgame_screen\Board.cpp"/>
+    <ClCompile Include="..\..\gui\src\chessgame_screen\Board.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</TreatWarningAsError>
+    </ClCompile>
     <ClCompile Include="..\..\gui\src\common\Snackbar.cpp"/>
   </ItemGroup>
   <ItemGroup>
@@ -174,7 +182,11 @@
     <ClInclude Include="..\..\gui\include\gui\chessgame_screen\Bishop.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\chessgame_screen\Board.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\chessgame_screen\BoardRenderer.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\chessgame_screen\BoardState.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\chessgame_screen\BoardStateModel.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\chessgame_screen\ChessEnums.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\chessgame_screen\ChessTimer.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\chessgame_screen\ChessAI.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\chessgame_screen\PieceSelector.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\chessgame_screen\Queen.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\chessgame_screen\Rook.hpp"/>
@@ -184,6 +196,7 @@
     <ClInclude Include="..\..\gui\include\gui\common\FrontendHeap.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\FrontendHeapBase.hpp"/>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\MJPEGDecoder.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\common\GameStateSerializer.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\model\Model.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp"/>
@@ -254,7 +267,7 @@
       <DisableSpecificWarnings>4355</DisableSpecificWarnings>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>$(ApplicationRoot)\..\Middlewares\Third_Party\rapidjson;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ApplicationRoot)\..\Middlewares\Third_Party\rapidjson;$(ApplicationRoot)\..\FATFS\App;$(ApplicationRoot)\..\FATFS\Target;$(ApplicationRoot)\..\Middlewares\Third_Party\FatFs\src;$(ApplicationRoot)\..\Middlewares\Third_Party\FatFs\src\option;$(ApplicationRoot)\..\Drivers\CMSIS\Include;C:\Repos\ams-project-2\chess\Drivers\STM32H7xx_HAL_Driver\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

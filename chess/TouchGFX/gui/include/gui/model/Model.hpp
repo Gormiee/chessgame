@@ -1,6 +1,10 @@
 #ifndef MODEL_HPP
 #define MODEL_HPP
 
+#include <chrono>
+#include <iostream>
+#include <touchgfx/utils.hpp>
+
 class ModelListener;
 
 class Model

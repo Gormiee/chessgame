@@ -655,6 +655,21 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/chessgame_screen/BoardRenderer.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/BoardState.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/chessgame_screen/BoardState.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/BoardStateModel.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/chessgame_screen/BoardStateModel.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/ChessAI.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/chessgame_screen/ChessAI.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/gui/ChessGamePresenter.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/chessgame_screen/ChessGamePresenter.cpp</locationURI>
@@ -663,6 +678,11 @@
 			<name>Application/User/gui/ChessGameView.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/chessgame_screen/ChessGameView.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/ChessTimer.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/chessgame_screen/ChessTimer.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/gui/PieceSelector.cpp</name>
@@ -678,6 +698,11 @@
 			<name>Application/User/gui/FrontendApplication.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/common/FrontendApplication.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/GameStateSerializer.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/common/GameStateSerializer.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/gui/Snackbar.cpp</name>
@@ -765,6 +790,61 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/VectorFontRendererBuffers.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/Vector_Font_verdana_0.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Vector_Font_verdana_0.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Vector_Font_verdana_1.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Vector_Font_verdana_1.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Vector_Font_verdana_20.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Vector_Font_verdana_20.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Vector_Font_verdana_3.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Vector_Font_verdana_3.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Vector_Font_verdana_31.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Vector_Font_verdana_31.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Vector_Font_verdana_4.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Vector_Font_verdana_4.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Vector_Font_verdana_5.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Vector_Font_verdana_5.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Vector_Kerning_verdana.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Vector_Kerning_verdana.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Vector_Table_verdana.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Vector_Table_verdana.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Vector_Table_verdana_10.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Vector_Table_verdana_10.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Vector_Table_verdana_12.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Vector_Table_verdana_12.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/ChessGameViewBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/chessgame_screen/ChessGameViewBase.cpp</locationURI>
@@ -785,6 +865,81 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/SVGDatabase.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_alternate_theme_images_backgrounds_480x272_gradient_light.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_backgrounds_480x272_gradient_light.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_containers_small_wide_outlined_light.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_containers_small_wide_outlined_light.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_button_icon_round_tiny_outline_normal.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_icon_round_tiny_outline_normal.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_button_icon_round_tiny_outline_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_icon_round_tiny_outline_pressed.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_slider_horizontal_thin_filler_small.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_slider_horizontal_thin_filler_small.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_slider_horizontal_thin_round_dark.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_slider_horizontal_thin_round_dark.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_slider_horizontal_thin_track_small.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_slider_horizontal_thin_track_small.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_icon_theme_images_action_done_50_50_E8F6FB.svg.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_icon_theme_images_action_done_50_50_E8F6FB.svg.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_icon_theme_images_content_save_50_50_E8F6FB.svg.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_icon_theme_images_content_save_50_50_E8F6FB.svg.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_icon_theme_images_file_download_50_50_E8E9FA.svg.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_icon_theme_images_file_download_50_50_E8E9FA.svg.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_icon_theme_images_hardware_computer_50_50_E8F6FB.svg.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_icon_theme_images_hardware_computer_50_50_E8F6FB.svg.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_icon_theme_images_maps_celebration_49_48_FFD700.svg.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_icon_theme_images_maps_celebration_49_48_FFD700.svg.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_icon_theme_images_navigation_close_50_50_E60000.svg.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_icon_theme_images_navigation_close_50_50_E60000.svg.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_icon_theme_images_social_people_50_50_E8F6FB.svg.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_icon_theme_images_social_people_50_50_E8F6FB.svg.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_CheckImage.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_CheckImage.cpp</locationURI>
@@ -793,6 +948,11 @@
 			<name>Application/User/generated/image_CheckmateImage.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_CheckmateImage.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_MainMenu.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_MainMenu.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_blackbishop.cpp</name>
